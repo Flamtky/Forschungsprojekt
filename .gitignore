@@ -1,0 +1,24 @@
+abbildungen/
+tmp/
+pilot-data/
+
+# Local FFmpeg executables used to assemble pilot distributions. The download task recreates them.
+Java/game/local-tools/ffmpeg/
+# Pinned Temurin JRE archives for the per-platform pilot client packages.
+Java/game/local-tools/jre/
+
+# Participant replay state and supervisor-only release credentials, wherever a run is started.
+*.replay-approvals.json
+*.replay-approvals.json.tmp
+replay-*.json.tmp
+replay-launch.json
+replay-state.json
+replay-receipt.json
+replay-service.json
+replay-deleted.json
+replay-open.html
+replay-helper.log
+replay.lock
+replay-S*-before.mp4*
+replay-S*-after.mp4*
+__pycache__/

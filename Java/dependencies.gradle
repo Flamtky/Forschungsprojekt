@@ -1,0 +1,56 @@
+ext {
+    // -- PLUGINS
+    spotlessVersion = '8.10.0'
+    protobufGradlePluginVersion = '0.10.0'
+
+    // -- DEPENDENCIES
+    gdxVersion = '1.14.2'
+    aiVersion = '1.8.2'
+    junitVersion = '6.1.3'
+    junitLauncherVersion = '6.1.3'
+
+    mockitoVersion = '5.23.0'
+    protobufVersion = '4.36.0'
+    jk1licenseVersion = '3.1.4'
+    gdxControllersVersion = '2.2.4'
+    beryxRuntimeVersion = '2.0.1'
+    jacksonVersion = '3.2.2'
+    postgresVersion = '42.7.13'
+    jsonSchemaValidatorVersion = '3.0.6'
+    jsonCanonicalizationVersion = '1.1'
+
+
+    // -- NETWORK / SERVER
+    nettyVersion = '4.2.17.Final'
+
+    supportDependencies = [
+        // LibGDX
+        gdx                       : "com.badlogicgames.gdx:gdx:$gdxVersion",
+        gdx_platform              : "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop",
+        gdx_backend_lwjgl3        : "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion",
+        gdx_ai                    : "com.badlogicgames.gdx:gdx-ai:$aiVersion",
+        gdx_freetype              : "com.badlogicgames.gdx:gdx-freetype:$gdxVersion",
+        gdx_freetype_platform     : "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop",
+        gdx_backend_headless      : "com.badlogicgames.gdx:gdx-backend-headless:$gdxVersion",
+        gdx_controllers         : "com.badlogicgames.gdx-controllers:gdx-controllers-core:$gdxControllersVersion",
+        gdx_controllers_desktop : "com.badlogicgames.gdx-controllers:gdx-controllers-desktop:$gdxControllersVersion",
+
+        // JUnit and Mockito for testing
+        junit                     : "org.junit.jupiter:junit-jupiter:$junitVersion",
+        junitLauncher             : "org.junit.platform:junit-platform-launcher:$junitLauncherVersion",
+        mockito_core              : "org.mockito:mockito-core:$mockitoVersion",
+
+        // JSON validation and canonicalization
+        jackson_databind          : "tools.jackson.core:jackson-databind:$jacksonVersion",
+        postgres                  : "org.postgresql:postgresql:$postgresVersion",
+        json_schema_validator     : "com.networknt:json-schema-validator:$jsonSchemaValidatorVersion",
+        json_canonicalization     : "io.github.erdtman:java-json-canonicalization:$jsonCanonicalizationVersion",
+
+        // Protobuf for network serialization
+        protobuf_java             : "com.google.protobuf:protobuf-java:$protobufVersion",
+        protobuf_java_util        : "com.google.protobuf:protobuf-java-util:$protobufVersion",
+
+
+        // Netty for multiplayer logic
+        netty_all     : "io.netty:netty-all:$nettyVersion",]
+}

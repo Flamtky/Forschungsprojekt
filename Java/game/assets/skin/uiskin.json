@@ -1,0 +1,381 @@
+{
+com.badlogic.gdx.graphics.g2d.BitmapFont: {
+	myFont: {
+		file: myFont.fnt
+		scaledSize: -1
+		markupEnabled: true
+		flip: false
+	}
+	roboto-semibold-32: {
+		file: roboto-semibold-32.fnt
+		scaledSize: -1
+		markupEnabled: false
+		flip: false
+	}
+	roboto-semibold-64: {
+		file: roboto-semibold-64.fnt
+		scaledSize: -1
+		markupEnabled: false
+		flip: false
+	}
+}
+com.badlogic.gdx.graphics.Color: {
+	black: {
+		r: 0.023529412
+		g: 0.023529412
+		b: 0.023529412
+		a: 1
+	}
+	blue_matte: {
+		r: 0.09019608
+		g: 0.09019608
+		b: 0.7490196
+		a: 1
+	}
+	cornflower_blue: {
+		r: 0.36078432
+		g: 0.63529414
+		b: 0.8784314
+		a: 1
+	}
+	experience_green: {
+		r: 0.16078432
+		g: 1
+		b: 0
+		a: 1
+	}
+	green: {
+		r: 0.09019608
+		g: 0.8039216
+		b: 0.14509805
+		a: 1
+	}
+	health_red: {
+		r: 1
+		g: 0
+		b: 0
+		a: 1
+	}
+	mana_blue: {
+		r: 0
+		g: 0
+		b: 1
+		a: 1
+	}
+	orange: {
+		r: 0.94509804
+		g: 0.6745098
+		b: 0.039215688
+		a: 1
+	}
+	RGBA_255_0_0_0: {
+		r: 1
+		g: 0
+		b: 0
+		a: 0
+	}
+	transparent: {
+		r: 1
+		g: 1
+		b: 1
+		a: 0
+	}
+	white: {
+		r: 1
+		g: 1
+		b: 1
+		a: 1
+	}
+}
+com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable: {
+	progress-bar-fill: {
+		region: progress-bar-fill
+		minWidth: 1
+		minHeight: 10
+	}
+}
+com.badlogic.gdx.scenes.scene2d.utils.NinePatchDrawable: {
+	progress-bar-smaller: {
+		patch: progress-bar-smaller
+		minWidth: 12
+		minHeight: 12
+		leftWidth: 1
+		rightWidth: 1
+		topHeight: 1
+		bottomHeight: 1
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Skin$TintedDrawable: {
+	round-light-gray: {
+		name: round-white
+		color: {
+			r: 0.86333334
+			g: 0.86333334
+			b: 0.86333334
+			a: 1
+		}
+	}
+	progress-bar-fill-experience: {
+		name: progress-bar-fill
+		color: experience_green
+		minWidth: 1
+		minHeight: 10
+	}
+	progress-bar-fill-health: {
+		name: progress-bar-fill
+		color: health_red
+		minWidth: 1
+		minHeight: 10
+	}
+	progress-bar-fill-mana: {
+		name: progress-bar-fill
+		color: mana_blue
+		minWidth: 1
+		minHeight: 10
+	}
+	progress-bar-fill-stamina: {
+		name: progress-bar-fill
+		color: orange
+		minWidth: 1
+		minHeight: 10
+	}
+}
+com.badlogic.gdx.scenes.scene2d.utils.TiledDrawable: {
+	healthbar: {
+		region: progress-bar
+		color: experience_green
+		minWidth: 1
+		minHeight: 12
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Button$ButtonStyle: {
+	default: {
+		up: check_square_grey
+		over: check_square_grey_square
+		checked: check_square_grey_square
+	}
+	exit: {
+		up: exit_clear
+		down: exit_clear_hovered
+		over: exit_clear_hovered
+		disabled: exit_clear
+	}
+	radio: {
+		up: check_round_grey
+		checked: check_round_grey_circle
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.CheckBox$CheckBoxStyle: {
+	default: {
+		checkboxOn: check_square_grey_checkmark
+		checkboxOff: check_square_grey
+		font: roboto-semibold-32
+		fontColor: black
+	}
+	radio: {
+		checkboxOn: check_round_grey_circle
+		checkboxOff: check_round_grey
+		font: myFont
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.ImageButton$ImageButtonStyle: {
+	default: {
+		imageUp: generic-area
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.ImageTextButton$ImageTextButtonStyle: {
+	default: {
+		font: myFont
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Label$LabelStyle: {
+	default: {
+		font: roboto-semibold-32
+		fontColor: black
+	}
+	keypad: {
+		font: roboto-semibold-64
+	}
+	timer: {
+		font: roboto-semibold-32
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.List$ListStyle: {
+	default: {
+		font: roboto-semibold-32
+		fontColorSelected: blue_matte
+		fontColorUnselected: black
+		selection: list
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.ProgressBar$ProgressBarStyle: {
+	default-horizontal: {
+		background: progress_transparent_small
+		knobBefore: progress_blue_small
+	}
+	default-vertical: {
+		background: progress_transparent_small
+		knobBefore: progress_blue_small
+	}
+	healthbar: {
+		background: progress-bar-smaller
+		knobBefore: progress-bar-fill-health
+	}
+	manabar: {
+		background: progress-bar-smaller
+		knobBefore: progress-bar-fill-mana
+	}
+	staminabar: {
+		background: progress-bar-smaller
+		knobBefore: progress-bar-fill-stamina
+	}
+	experiencebar: {
+		background: progress-bar-smaller
+		knobBefore: progress-bar-fill-experience
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.ScrollPane$ScrollPaneStyle: {
+	default: {
+		background: generic-area
+		hScroll: scrollbar_future_transparent_small_horizontal
+		hScrollKnob: scrollbar_future_grey_small_horizontal
+		vScroll: scrollbar_future_transparent_small
+		vScrollKnob: scrollbar_future_grey_small
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.SelectBox$SelectBoxStyle: {
+	default: {
+		font: roboto-semibold-32
+		fontColor: black
+		overFontColor: blue_matte
+		background: select_box
+		scrollStyle: default
+		listStyle: default
+	}
+	small: {
+		font: roboto-semibold-32
+		fontColor: black
+		overFontColor: blue_matte
+		background: select_box_32pt
+		scrollStyle: default
+		listStyle: default
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Slider$SliderStyle: {
+	default-horizontal: {
+		knobOver: icon_circle
+		knobDown: icon_circle
+		background: slide_horizontal_grey
+		knob: icon_outline_circle
+	}
+	default-vertical: {
+		knobOver: icon_circle
+		knobDown: icon_circle
+		background: slide_vertical_grey
+		knob: icon_outline_circle
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.SplitPane$SplitPaneStyle: {
+	default-horizontal: {
+		handle: horizontal-split-pane
+	}
+	default-vertical: {
+		handle: vertical-split-pane
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.TextButton$TextButtonStyle: {
+	default: {
+		font: roboto-semibold-32
+		fontColor: black
+		up: grey_square_depth_flat
+		down: grey_square_gloss
+		over: grey_square_depth_gloss
+		disabled: grey_square_depth_flat
+		pressedOffsetY: -2
+	}
+	keypad: {
+		font: myFont
+		up: round-white
+		down: round-gray
+		over: round-light-gray
+	}
+	green: {
+		font: roboto-semibold-32
+		fontColor: white
+		up: green_square_depth_flat
+		down: green_square_gloss
+		over: green_square_depth_gloss
+		disabled: generic-area-depth
+		pressedOffsetY: -2
+	}
+	blue-outline: {
+		font: roboto-semibold-32
+		fontColor: black
+		downFontColor: white
+		overFontColor: white
+		disabledFontColor: black
+		up: blue_square_depth_border
+		down: blue_square_flat
+		over: blue_square_depth_flat
+		disabled: generic-area-depth
+		pressedOffsetY: -2
+	}
+	red-outline: {
+		font: roboto-semibold-32
+		fontColor: black
+		downFontColor: white
+		overFontColor: white
+		disabledFontColor: black
+		up: red_square_depth_border
+		down: red_square_flat
+		over: red_square_depth_flat
+		disabled: generic-area-depth
+		pressedOffsetY: -2
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.TextField$TextFieldStyle: {
+	default: {
+		font: myFont
+		fontColor: black
+		background: input_outline_square
+		focusedBackground: input_square
+		cursor: cursor
+		selection: selection
+		messageFont: myFont
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.TextTooltip$TextTooltipStyle: {
+	default: {
+		label: default
+		background: window_background_big
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Touchpad$TouchpadStyle: {
+	default: {
+		background: touchpad
+		knob: touchpad-knob
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Tree$TreeStyle: {
+	default: {
+		plus: plus
+		minus: minus
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Window$WindowStyle: {
+	default: {
+		background: window_background_big_blue
+		titleFont: roboto-semibold-32
+		titleFontColor: transparent
+	}
+	Letter: {
+		background: Paper
+		titleFont: myFont
+	}
+	no-title: {
+		background: window_background_big
+		titleFont: roboto-semibold-32
+		titleFontColor: transparent
+	}
+}
+}

@@ -1,0 +1,37 @@
+// Client recording finalization messages.
+
+syntax = "proto3";
+
+package dungeon.c2s;
+
+option java_multiple_files = true;
+option java_package = "engine.network.proto.c2s";
+option java_outer_classname = "RecordingFinalizationProto";
+
+// Client-to-server: reports the final state of one local gameplay recording.
+message RecordingFinalizationResult {
+  enum Status {
+    STATUS_UNSPECIFIED = 0;
+    COMPLETE = 1;
+    FAILED = 2;
+  }
+
+  string completion_id = 1;
+  Status status = 2;
+  string study_id = 3;
+  string recording_id = 4;
+  int32 frames_per_second = 5;
+  int64 video_bytes = 6;
+  int64 frames_written = 7;
+  int64 frames_duplicated = 8;
+  int64 frames_dropped = 9;
+  int32 markers_written = 10;
+  string ffmpeg_platform = 11;
+  string ffmpeg_source = 12;
+  string failure = 13;
+  int32 width = 14;
+  int32 height = 15;
+  string format = 16;
+  // Dropped/duplicated counters are not reliable after crash recovery.
+  bool recovered_after_crash = 17;
+}

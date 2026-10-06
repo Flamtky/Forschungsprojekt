@@ -1,0 +1,34 @@
+// Server recording finalization messages.
+
+syntax = "proto3";
+
+package dungeon.s2c;
+
+option java_multiple_files = true;
+option java_package = "engine.network.proto.s2c";
+option java_outer_classname = "RecordingFinalizationProto";
+
+// Server-to-client: asks a client to stop and verify its local recording.
+message RecordingFinalizationRequest {
+  string completion_id = 1;
+  string reason = 2;
+  int32 timeout_seconds = 3;
+  bool gameplay_completed = 4;
+  // Frozen visible recording identity; empty only when no marker was confirmed.
+  string recording_id = 5;
+}
+
+// Server-to-client: confirms that the server received all available client results.
+message RecordingFinalizationComplete {
+  enum RunStatus {
+    RUN_STATUS_UNSPECIFIED = 0;
+    COMPLETE = 1;
+    INVALID = 2;
+    ABORTED = 3;
+  }
+
+  string completion_id = 1;
+  RunStatus run_status = 2;
+  string message = 3;
+  string replay_launch_json = 4;
+}
